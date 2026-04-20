@@ -1,0 +1,61 @@
+﻿:root {
+    --boys: #1a6fb5;
+    --girls: #b5196e;
+    --dark: #1f2937;
+    --light: #f5f7fb;
+}
+body {
+    background: var(--light);
+}
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar {
+    width: 250px;
+    background: var(--dark);
+}
+.theme-boys .sidebar {
+    background: var(--boys);
+}
+.theme-girls .sidebar {
+    background: var(--girls);
+}
+.content-wrap {
+    flex: 1;
+    padding: 1rem;
+}
+.card-blue {
+    background: var(--boys);
+    color: #fff;
+}
+.card-pink {
+    background: var(--girls);
+    color: #fff;
+}
+.room-tile {
+    border-radius: .5rem;
+    padding: .75rem;
+    color: #fff;
+    margin-bottom: .5rem;
+}
+.room-vacant { background: #198754; }
+.room-partial { background: #ffc107; color: #111; }
+.room-full { background: #dc3545; }
+.room-maintenance { background: #6c757d; }
+.timeline-step {
+    border-left: 3px solid #dee2e6;
+    padding-left: .75rem;
+    margin-bottom: .75rem;
+}
+.timeline-step.done { border-color: #198754; }
+.timeline-step.rejected { border-color: #dc3545; }
+@media print {
+    .sidebar, .no-print, .btn, .dataTables_length, .dataTables_filter, .dataTables_info, .dataTables_paginate {
+        display: none !important;
+    }
+    body, .content-wrap {
+        background: #fff;
+        padding: 0;
+    }
+}
